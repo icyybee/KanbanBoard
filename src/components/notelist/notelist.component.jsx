@@ -17,11 +17,12 @@ const Notelist = ({notes}) => {
     }
 
     function submitNote(event) {
-        event.preventDefault();
         //addNote((noteItem));
         setNote({
           content: ""
         });
+
+        event.preventDefault();
     }
 
     return (
@@ -36,8 +37,12 @@ const Notelist = ({notes}) => {
                         
                         <div className="note__body">
                             <Notur notesItem={note} content={note.content} />
-                            <CreateNote onAdd = {addNote} key={note.id} note={note}/>
-                            <Note key={note.id} notesItem={note} content={note.content}/>
+                            <CreateNote onAdd = {addNote} note={note} />
+                            {noteItem.map((newNote) => {
+                                return (
+                                    <Note key={newNote.id} notesItem={note} content={newNote.content} />
+                                );
+                            })}
                         </div>
                         
                         <button className="btn" onClick = {submitNote}>+</button>

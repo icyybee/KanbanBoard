@@ -1,8 +1,9 @@
 import "./note.styles.scss";
 
-const Note = ({notesItem}) => {
-    const {content, color} = notesItem;
-    
+const Note = ({notesItem, newNote}) => {
+    const {color} = notesItem;
+    const {content} = newNote;
+
     return (
         <div 
             className="note__item note__new"

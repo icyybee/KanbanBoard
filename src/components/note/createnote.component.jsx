@@ -17,8 +17,6 @@ const CreateNote = ({note}) => {
             [name]: value
           };
         });
-
-        event.preventDefault();
     }
     
     return (
