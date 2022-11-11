@@ -3,23 +3,25 @@ import "./notelist.styles.scss";
 import {useState} from "react";
 import Note from "../note/note.component";
 import CreateNote from "../note/createnote.component";
+import Notur from "../note/notur.component";
+
 
 const Notelist = ({notes}) => {
     
-    const [noteItem, setNotes] = useState([]);
+    const [noteItem, setNote] = useState([]);
 
     function addNote(newNote) {
-        setNotes((prevNotes) => {
+        setNote((prevNotes) => {
             return [...prevNotes, newNote];
         });
     }
 
     function submitNote(event) {
         event.preventDefault();
-        // addNote(noteItem);
-        // setNotes({
-        //   content: ""
-        // });
+        //addNote((noteItem));
+        setNote({
+          content: ""
+        });
     }
 
     return (
@@ -33,8 +35,9 @@ const Notelist = ({notes}) => {
                         </div>
                         
                         <div className="note__body">
-                            <Note key={note.id} notesItem={note} content={note.content}/>
+                            <Notur notesItem={note} content={note.content} />
                             <CreateNote onAdd = {addNote} key={note.id} note={note}/>
+                            <Note key={note.id} notesItem={note} content={note.content}/>
                         </div>
                         
                         <button className="btn" onClick = {submitNote}>+</button>

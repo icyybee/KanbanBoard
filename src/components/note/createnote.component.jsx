@@ -3,14 +3,15 @@ import "./note.styles.scss";
 import { useState } from "react";
 
 const CreateNote = ({note}) => {
-    const [notes, setNote] = useState({
+
+    const [notes, setNotes] = useState({
         content: ""
     });
     
     function handleChange(event) {
         const { name, value } = event.target;
     
-        setNote((prevNote) => {
+        setNotes((prevNote) => {
           return {
             ...prevNote,
             [name]: value
