@@ -34,29 +34,29 @@ const App = () => {
     }
   ];
 
-  const todo = [
-    {
-      content: ""
-    }
-  ]
+  // const todo = [
+  //   {
+  //     content: ""
+  //   }
+  // ]
 
-  const progress = [
-    {
-      content: ""
-    }
-  ]
+  // const progress = [
+  //   {
+  //     content: ""
+  //   }
+  // ]
 
-  const review = [
-    {
-      content: ""
-    }
-  ]
+  // const review = [
+  //   {
+  //     content: ""
+  //   }
+  // ]
 
-  const done = [
-    {
-      content: ""
-    }
-  ]
+  // const done = [
+  //   {
+  //     content: ""
+  //   }
+  // ]
 
   return (
     <div className="board">
