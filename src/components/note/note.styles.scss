@@ -1,0 +1,78 @@
+.note {
+    background-color: var(--color-grey-light-1);
+    padding: 1rem;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+ 
+        & h3 {
+            color: var(--color-black);
+            font-size: .9rem;
+        }
+
+        &--ellipse {
+            position: relative;
+            display: inline-block;
+        
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            &::before { margin-left: -.5rem; }
+            &::after { margin-left: .3rem; }
+        }
+
+        &--ellipse,
+        &--ellipse::before,
+        &--ellipse::after {
+            width: 3px;
+            height: 3px;
+            background-color: var(--color-black);
+            border-radius: 50%;
+            float: right;
+        } 
+    }
+
+    &__body {
+        width: 100%;
+        height: auto;
+        
+        display: flex;
+        flex-direction: column;
+        
+        & p {
+            padding: 2rem;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 1px 3px 0px var(--color-grey-dark-1);
+    
+        & p {
+            padding: 2rem 1.3rem 1rem 1rem;
+            font-size: .8rem;
+            color: var(--color-light-black);
+            font-weight: bold;
+        }
+    }
+}
+
+.create__note {
+    & textarea {
+        border: none;
+        outline: none;
+        font-size: .8rem;
+        font-family: inherit;
+        resize: none;
+        padding: 2rem;
+        width: 100%;
+        font-weight: 700;
+    }
+}
